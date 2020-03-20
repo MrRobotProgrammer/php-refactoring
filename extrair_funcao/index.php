@@ -1,15 +1,29 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 $saldos = [
     'Giovanni' => 3000,
     'Erika' => 5000,
 ];
 
-//Verifica se o usuário existe
-if (array_key_exists("Giovanni", $saldos)) {
-    //Se existir, exibe o saldo na tela
-    echo "<p>O saldo do Giovanni é: ${saldos['Giovanni']}</p>";
-} else {
-    //Se não, exibe erro
+function displayCurrentist(string $name, array $saldos)
+{
+    if (array_key_exists($name, $saldos)) {
+        displayMensage($name, $saldos);
+    } else {
+        displayError();
+    }
+}
+
+function displayMensage(string $name, array $saldos)
+{
+    echo "<p>O saldo do $name é: {$saldos[$name]} </p>";
+}
+
+function displayError()
+{
     echo "<p>Correntista não existente.</p>";
 }
+
+displayCurrentist('Giovanni', $saldos);
