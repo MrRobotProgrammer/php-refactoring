@@ -1,7 +1,7 @@
 # php-refactoring
 Rever os conceitos de refatoração e boas praticas com a linguagem PHP
 
-- Utilizar servikdor PHP    
+- Utilizar servidor PHP    
     .   command - php -S localhost:3000
     .   Ex: http://localhost:3000/nome_do_projeto
 
@@ -18,3 +18,8 @@ Rever os conceitos de refatoração e boas praticas com a linguagem PHP
     .   url: http://localhost:3000/incorporar_funcoes
     . eliminar funções redundantes e simplificar o resultado dos dados
 
+
+Técnicas avançadas de composição
+-   Quebrar uma variável temporária quando ela acumula muitas responsabilidades.
+-   Remover atribuição à parâmetros utilizando uma variável local.
+-   Refatorar substituindo um algoritmo ruim.
